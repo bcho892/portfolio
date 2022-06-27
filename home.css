@@ -13,8 +13,9 @@ html {
 body {
     background-color: #9E9E9E;
     color: white;
-    
+
 }
+
 
 .diagonal1 {
     width: 50rem;
@@ -29,7 +30,7 @@ body {
 .diagonal2 {
     width: 50rem;
     height: 10rem;
-    background-image:linear-gradient(to right, var(--var3), #BC261E)  ;
+    background-image: linear-gradient(to right, var(--var3), #BC261E);
     transform: skewY(50deg);
     position: absolute;
     right: 3vw;
@@ -63,17 +64,27 @@ body {
     margin: 0 2vw;
     padding: 3rem 13vw 0 13vw;
     background-color: #DC1A0B;
-    border-radius: 2rem;
+    
     box-shadow: 0 1rem 1rem rgb(33, 33, 33);
 }
 
 .landingpage {
     display: flex;
+    align-items: center;
     padding-bottom: 3rem;
+    width: inherit;
+    min-height: 95vh;
+}
 
+.main{
+    width:100%;
+    display: flex;
+  
+    justify-content: center;
 }
 
 .name {
+    width: 100%;
     margin-top: 6rem;
     display: flex;
     color: white;
@@ -117,33 +128,38 @@ body {
 
 .aboutpage {
     display: flex;
-    padding-bottom: 3rem;
+    padding: 5rem 0;
+    min-height: 20rem;
     justify-content: center;
     position: relative;
-  
-}
 
-.aboutpage::after {
-    content: attr(backgroundtext);
+}
+.aboutpage::before{
     position: absolute;
     left: 0;
-    bottom: -2rem;
-    font-size: 8rem;
-    font-weight: 900;
-    color: #BC261E;
- 
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/misc/aboutbackground.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    content: "";
+   
 }
 
-.aboutheading{
+.aboutheading {
     display: flex;
     align-items: center;
 }
-.trail{
+
+.trail {
     width: 50%;
     height: 2px;
     background-color: white;
     margin: 0 2rem;
 }
+
 .aboutdescription {
     max-width: 40rem;
     z-index: 99;
@@ -167,29 +183,37 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 30rem;
 }
+
+.skills::before{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/misc/skillsbackground.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    content: "";
+   
+}
+
 
 .skilldescription {
     justify-content: center;
     display: flex;
     height: 100%;
     width: 100%;
-    gap:1.5rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
     z-index: 99;
 }
 
-.skills::after {
-    content: attr(backgroundtext);
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-weight: 900;
-    font-size: 8rem;
-    color: #BC261E;
-    
 
-}
+
+
 
 
 .skilldisplay {
@@ -203,11 +227,14 @@ h1 {
     align-items: center;
     justify-content: center;
     border-radius: 2rem;
-    background-color: var(--var4);
-    box-shadow:  0 0 5px rgb(33, 33, 33);
+   
+    box-shadow: 0 0 5px rgb(33, 33, 33);
     z-index: 99;
 }
 
+.skilldisplay *{
+    margin: 0.25rem 0;
+}
 
 .skilldisplay img {
     height: 90px;
@@ -215,115 +242,174 @@ h1 {
     padding: 0.5rem
 }
 
-.projects{
+.projects {
     position: relative;
 }
 
-.projects h1{
+.projects h1 {
     position: relative;
-        z-index: 99;
+    z-index: 99;
 
 }
 
-.projects::after{
-    content: attr(backgroundtext);
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-weight: 900;
-    font-size: 8rem;
-    color: #BC261E;
-    z-index: 0;
-    overflow-wrap: break-word;
-    width: 100%;
-    display: block;
-    writing-mode: vertical-rl;
 
-}
 
-.projectcontainer{
+.projectcontainer {
     display: flex;
     width: 100%;
     position: relative;
-    z-index:6;
+    z-index: 6;
     flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
 }
 
-.projectdisplay{
-    width: inherit;
-    display: flex  ;
-    padding-top: 4rem;
-    justify-content: center;
-   flex-direction: column;
-    position: relative;
+
+.projects::before{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/misc/projectbackground2.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    content: "";
    
 }
 
 
+.projectcontainer::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/misc/projectbackground.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    content: "";
+   
+}
+
+.projectdisplay {
+    width: inherit;
+    display: flex;
+    padding-top: 4rem;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap-reverse;
+    height: 19rem;
+    z-index: 8;
+}
 
 .projectdisplay .projecttext {
     width: 20rem;
-  
     position: relative;
-    padding: 0 15vw ;
     z-index: 2;
 
-    
 }
 
-.projectdisplay .stack{
+.projectdisplay .stack {
     display: flex;
-
 }
 
-.projectdisplay .actions{
+.projectdisplay .actions {
     display: flex;
     width: 100%;
     justify-content: flex-end;
 }
 
-.projectdisplay img{
+.projectdisplay .projecttext .smallimage img {
+    display: none;
+    height: auto;
+    border-radius: 2rem 2rem 0 0;
+    width: calc(100% + 2rem);
+    margin: -0.5rem -1rem;
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-animation: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.projectdisplay .projecttext img {
     height: 30px;
     width: 30px;
     margin-right: 0.5rem;
 }
 
-.textbox{
+.projectdisplay .projectimage img {
+    height: calc(19rem + 2px);
+    margin: 0;
+    border-radius: 2rem 0 0 2rem;
+    -webkit-filter: brightness(70%);
+}
+
+.projectdisplay .projectimage.right img {
+    height: calc(19rem + 2px);
+    margin: 0;
+    border-radius: 0 2rem 2rem 0;
+    -webkit-filter: brightness(70%);
+    margin-left: 2rem;
+}
+
+.projectdisplay .projectimage img:hover {
+    -webkit-filter: brightness(90%);
+    -webkit-transition: all 1s ease;
+    -moz-animation: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.textbox {
     border: 1px solid white;
-    width: 100%;
-    height: 100%;
-    font-weight:100;
-    padding: 1rem;
-    border-radius: 2rem;
+    width: 20rem;
+    font-weight: 100;
+    padding: 0.5rem 1rem;
+    height: 18rem;
 
 }
 
-#listcreator::after{
-    display: block;
-    content: "";
-    background-image: url(/projects/studyplanner.png);
-    width: 100%;
-    height: 100%;
-    background-size: auto 15rem;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    
+.right{
+    border-radius: 0 2rem 2rem 0;
+    border-left: none;
 }
 
-#studyplanner::before{
-    display: block;
-    content: "";
-    background-image: url(/projects/studyplanner.png);
-    width: 100%;
-    height: 100%;
-    background-size: auto 15rem;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: 0;
-    left: 0;  
-    z-index: -1;
-    
+.left{
+    border-radius: 2rem 0 0 2rem;
+    border-right: none;
+}
+
+@media only screen and (max-width:1225px) {
+    .projectdisplay  {
+        height:auto;
+    }
+
+
+    .textbox{
+     
+        border-radius: 2rem;
+        height: auto;
+        border: 1px solid white;
+    }
+    .projectimage{
+        display: none;
+    }
+
+ 
+    .projectdisplay .projecttext .smallimage img{
+        display: block;
+        overflow: hidden;
+
+        
+    }
+    .projectdisplay .projecttext .smallimage img:hover{
+        -webkit-filter: brightness(90%);
+
+    }
 }
