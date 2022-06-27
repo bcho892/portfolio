@@ -4,8 +4,8 @@ html {
 
 :root {
     --var1: #FAFAFA;
-    --var2: #F7E7A3;
-    --var3: #F9E66B;
+    --var2: #F9E66B;
+    --var3: #F7E7A3;
     --var4: #DC1A0B;
     --var5: #EE8116;
 }
@@ -19,17 +19,17 @@ body {
 .diagonal1 {
     width: 50rem;
     height: 10rem;
-    background-color: var(--var2);
+    background-image: linear-gradient(to top, var(--var2), white);
     transform: skewY(30deg);
     position: absolute;
     right: 3vw;
-    z-index: 0;
+    z-index: 1;
 }
 
 .diagonal2 {
     width: 50rem;
     height: 10rem;
-    background-color: var(--var3);
+    background-image:linear-gradient(to right, var(--var3), #BC261E)  ;
     transform: skewY(50deg);
     position: absolute;
     right: 3vw;
@@ -70,8 +70,6 @@ body {
 .landingpage {
     display: flex;
     padding-bottom: 3rem;
-
-
 
 }
 
@@ -122,6 +120,7 @@ body {
     padding-bottom: 3rem;
     justify-content: center;
     position: relative;
+  
 }
 
 .aboutpage::after {
@@ -132,9 +131,19 @@ body {
     font-size: 8rem;
     font-weight: 900;
     color: #BC261E;
-
+ 
 }
 
+.aboutheading{
+    display: flex;
+    align-items: center;
+}
+.trail{
+    width: 50%;
+    height: 2px;
+    background-color: white;
+    margin: 0 2rem;
+}
 .aboutdescription {
     max-width: 40rem;
     z-index: 99;
@@ -142,13 +151,13 @@ body {
 
 h1 {
     font-size: 3rem;
-
+    color: var(--var2);
 }
 
 .divider {
     margin: 3rem 0;
     width: 100%;
-    height: 4px;
+    height: 2px;
     background-color: white;
 
 }
@@ -158,7 +167,6 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: .99;
 }
 
 .skilldescription {
@@ -185,6 +193,7 @@ h1 {
 
 
 .skilldisplay {
+    border: 1px solid white;
     flex-basis: 1;
     display: flex;
     width: 15rem;
@@ -195,13 +204,126 @@ h1 {
     justify-content: center;
     border-radius: 2rem;
     background-color: var(--var4);
-    box-shadow: 0 20px 20px rgb(33, 33, 33);
+    box-shadow:  0 0 5px rgb(33, 33, 33);
     z-index: 99;
 }
 
 
 .skilldisplay img {
-    height: 40px;
-    width: 40px;
+    height: 90px;
+    width: 90px;
     padding: 0.5rem
+}
+
+.projects{
+    position: relative;
+}
+
+.projects h1{
+    position: relative;
+        z-index: 99;
+
+}
+
+.projects::after{
+    content: attr(backgroundtext);
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: 900;
+    font-size: 8rem;
+    color: #BC261E;
+    z-index: 0;
+    overflow-wrap: break-word;
+    width: 100%;
+    display: block;
+    writing-mode: vertical-rl;
+
+}
+
+.projectcontainer{
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index:6;
+    flex-direction: column;
+}
+
+.projectdisplay{
+    width: inherit;
+    display: flex  ;
+    padding-top: 4rem;
+    justify-content: center;
+   flex-direction: column;
+    position: relative;
+   
+}
+
+
+
+.projectdisplay .projecttext {
+    width: 20rem;
+  
+    position: relative;
+    padding: 0 15vw ;
+    z-index: 2;
+
+    
+}
+
+.projectdisplay .stack{
+    display: flex;
+
+}
+
+.projectdisplay .actions{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.projectdisplay img{
+    height: 30px;
+    width: 30px;
+    margin-right: 0.5rem;
+}
+
+.textbox{
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+    font-weight:100;
+    padding: 1rem;
+    border-radius: 2rem;
+
+}
+
+#listcreator::after{
+    display: block;
+    content: "";
+    background-image: url(/projects/studyplanner.png);
+    width: 100%;
+    height: 100%;
+    background-size: auto 15rem;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    
+}
+
+#studyplanner::before{
+    display: block;
+    content: "";
+    background-image: url(/projects/studyplanner.png);
+    width: 100%;
+    height: 100%;
+    background-size: auto 15rem;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;  
+    z-index: -1;
+    
 }
