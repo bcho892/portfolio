@@ -11,9 +11,13 @@ html {
 }
 
 body {
-    background-color: #9E9E9E;
+    background-color: var(--var4);
     color: white;
-
+    margin: 0;
+    
+}
+p{
+    font-weight: 600;
 }
 
 
@@ -61,11 +65,10 @@ body {
 }
 
 .container {
-    margin: 0 2vw;
+ 
     padding: 3rem 13vw 0 13vw;
     background-color: #DC1A0B;
-    
-    box-shadow: 0 1rem 1rem rgb(33, 33, 33);
+ 
 }
 
 .landingpage {
@@ -76,10 +79,10 @@ body {
     min-height: 95vh;
 }
 
-.main{
-    width:100%;
+.main {
+    width: 100%;
     display: flex;
-  
+
     justify-content: center;
 }
 
@@ -132,9 +135,11 @@ body {
     min-height: 20rem;
     justify-content: center;
     position: relative;
-
+  
+    
 }
-.aboutpage::before{
+
+.aboutpage::before {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -145,17 +150,14 @@ body {
     background-repeat: no-repeat;
     background-size: 80% auto;
     content: "";
-   
+
 }
 
-.aboutheading {
-    display: flex;
-    align-items: center;
-}
+
 
 .trail {
-    width: 50%;
-    height: 2px;
+    width: 100%;
+    height: 4px;
     background-color: white;
     margin: 0 2rem;
 }
@@ -166,40 +168,63 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
-    color: var(--var2);
+    font-size: 4.5rem;
+    color: white;
 }
 
-.divider {
-    margin: 3rem 0;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-
-}
 
 .skills {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 30rem;
+    justify-content: center;
+    min-height: 50rem;
+    margin: 5rem -13vw;
+    padding: 3rem 0;
+    background-color: white;
+    color:rgb(33,33,33);
+    
 }
 
-.skills::before{
+.skillcontainer{
+    padding: 3rem 13vw 0 13vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills::after {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
     background-image: url(/misc/skillsbackground.png);
-    background-position: left top;
+    background-position: right top;
     background-repeat: no-repeat;
-    background-size: 80% auto;
+    background-size: 50% auto;
     content: "";
-   
+
 }
 
+.skills::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/misc/contactbackground.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 30% auto;
+    content: "";
+
+}
+
+.trail.black{
+    background-color: rgb(33, 33, 33);
+    
+}
 
 .skilldescription {
     justify-content: center;
@@ -214,11 +239,8 @@ h1 {
 
 
 
-
-
 .skilldisplay {
-    border: 1px solid white;
-    flex-basis: 1;
+    border: 1px solid rgb(33, 33, 33);
     display: flex;
     width: 15rem;
     height: 15rem;
@@ -226,20 +248,27 @@ h1 {
     padding: 0.5rem;
     align-items: center;
     justify-content: center;
-    border-radius: 2rem;
-   
+    
+
     box-shadow: 0 0 5px rgb(33, 33, 33);
     z-index: 99;
 }
 
-.skilldisplay *{
+.skilldisplay * {
     margin: 0.25rem 0;
 }
 
-.skilldisplay img {
+
+.skilldisplay svg {
     height: 90px;
     width: 90px;
     padding: 0.5rem
+}
+
+.misc{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
 }
 
 .projects {
@@ -249,10 +278,19 @@ h1 {
 .projects h1 {
     position: relative;
     z-index: 99;
+    line-height: 4rem;
 
 }
 
+.heading{
+    display: flex;
+    align-items: center;
+}
 
+.heading .trail{
+    width:100%;
+    z-index:99;
+}
 
 .projectcontainer {
     display: flex;
@@ -265,7 +303,7 @@ h1 {
 }
 
 
-.projects::before{
+.projects::before {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -274,13 +312,13 @@ h1 {
     background-image: url(/misc/projectbackground2.png);
     background-position: top right;
     background-repeat: no-repeat;
-    background-size: 80% auto;
+    background-size: 100% auto;
     content: "";
-   
+
 }
 
 
-.projectcontainer::after{
+.projects::after {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -291,7 +329,7 @@ h1 {
     background-repeat: no-repeat;
     background-size: 80% auto;
     content: "";
-   
+
 }
 
 .projectdisplay {
@@ -303,6 +341,8 @@ h1 {
     flex-wrap: wrap-reverse;
     height: 19rem;
     z-index: 8;
+    
+
 }
 
 .projectdisplay .projecttext {
@@ -325,7 +365,6 @@ h1 {
 .projectdisplay .projecttext .smallimage img {
     display: none;
     height: auto;
-    border-radius: 2rem 2rem 0 0;
     width: calc(100% + 2rem);
     margin: -0.5rem -1rem;
     -webkit-filter: brightness(50%);
@@ -345,25 +384,24 @@ h1 {
 .projectdisplay .projectimage img {
     height: calc(19rem + 2px);
     margin: 0;
-    border-radius: 2rem 0 0 2rem;
     -webkit-filter: brightness(70%);
-}
-
-.projectdisplay .projectimage.right img {
-    height: calc(19rem + 2px);
-    margin: 0;
-    border-radius: 0 2rem 2rem 0;
-    -webkit-filter: brightness(70%);
-    margin-left: 2rem;
-}
-
-.projectdisplay .projectimage img:hover {
-    -webkit-filter: brightness(90%);
     -webkit-transition: all 1s ease;
     -moz-animation: all 1s ease;
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
+}
+
+.projectdisplay .projectimage.right img {
+    height: calc(19rem + 2px);
+    margin: 0;
+    -webkit-filter: brightness(70%);
+    margin-left: 2rem;
+}
+
+.projectdisplay .projectimage img:hover {
+    -webkit-filter: brightness(100%);
+
 }
 
 .textbox {
@@ -375,40 +413,62 @@ h1 {
 
 }
 
-.right{
-    border-radius: 0 2rem 2rem 0;
+.contact{
+    margin: 5rem -13vw;
+    padding: 3rem 0;
+    color: rgb(33, 33, 33);
+    background-color: white; 
+}
+
+.contact h1{
+    color: rgb(33,33,33);
+}
+
+.outercontainer{
+    margin: 5rem -13vw;
+ 
+}
+
+.innercontainer{
+    padding: 3rem 13vw 0 13vw;
+
+}
+
+.right {
     border-left: none;
 }
 
-.left{
-    border-radius: 2rem 0 0 2rem;
+.left {
     border-right: none;
 }
 
+
+
 @media only screen and (max-width:1225px) {
-    .projectdisplay  {
-        height:auto;
+    .projectdisplay {
+        height: auto;
     }
 
 
-    .textbox{
-     
-        border-radius: 2rem;
+    .textbox {
+
         height: auto;
         border: 1px solid white;
     }
-    .projectimage{
+
+    .projectimage {
         display: none;
     }
 
- 
-    .projectdisplay .projecttext .smallimage img{
+
+    .projectdisplay .projecttext .smallimage img {
         display: block;
         overflow: hidden;
 
-        
+
     }
-    .projectdisplay .projecttext .smallimage img:hover{
+
+    .projectdisplay .projecttext .smallimage img:hover {
         -webkit-filter: brightness(90%);
 
     }
