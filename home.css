@@ -1,5 +1,7 @@
 html {
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+
 }
 
 :root {
@@ -11,35 +13,19 @@ html {
 }
 
 body {
-    background-color: var(--var4);
+
     color: white;
     margin: 0;
-    
+
+    min-height: 100%;
 }
-p{
+
+p {
     font-weight: 600;
 }
 
 
-.diagonal1 {
-    width: 50rem;
-    height: 10rem;
-    background-image: linear-gradient(to top, var(--var2), white);
-    transform: skewY(30deg);
-    position: absolute;
-    right: 3vw;
-    z-index: 1;
-}
 
-.diagonal2 {
-    width: 50rem;
-    height: 10rem;
-    background-image: linear-gradient(to right, var(--var3), #BC261E);
-    transform: skewY(50deg);
-    position: absolute;
-    right: 3vw;
-    z-index: 0;
-}
 
 .navbar {
     font-weight: 600;
@@ -65,18 +51,98 @@ p{
 }
 
 .container {
- 
+
     padding: 3rem 13vw 0 13vw;
-    background-color: #DC1A0B;
- 
+    background-color: var(--var4);
+
 }
 
 .landingpage {
+    background-color: white;
     display: flex;
     align-items: center;
-    padding-bottom: 3rem;
+
     width: inherit;
-    min-height: 95vh;
+    height: 98vh;
+    margin: 0 -13vw;
+    position: relative;
+}
+
+
+
+.landingpage * {
+    color: rgb(33, 33, 33);
+}
+
+.landingpage h1 {
+    font-size: 9rem;
+    line-height: 8rem;
+
+}
+
+.toptext {
+    display: flex;
+    position: relative;
+    z-index: 99;
+}
+
+.toptext::before {
+    content: "I am";
+    font-weight: 900;
+    position: absolute;
+    font-size: 1.5rem;
+    left: -4rem;
+    background-color: var(--var4);
+    padding: 1rem;
+    z-index: -1;
+    color: white;
+}
+
+
+.landingpage svg {
+    height: 5rem;
+    width: auto;
+    margin-top: 5rem;
+}
+
+
+.bottomtext {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -2.5rem;
+}
+
+.bottomtext * {
+    background-color: rgb(33, 33, 33);
+    margin: 0.3rem 0;
+    padding: 0.5rem 1rem;
+    color: white;
+
+}
+
+
+.bottomtext :last-child,
+.bottomtext :first-child {
+    background-color: var(--var4);
+    width: fit-content;
+}
+
+
+
+
+.landingpage::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url(/misc/welcomebackground.png);
+    background-size: 100% auto;
+    background-position: center;
+    width: 100%;
+    opacity: 50%;
+    height: 100%;
+    content: "";
+    background-repeat: no-repeat;
 }
 
 .main {
@@ -91,26 +157,16 @@ p{
     margin-top: 6rem;
     display: flex;
     color: white;
+    flex-direction: column;
     z-index: 2;
 }
 
-.fullstop {
-    align-self: flex-end;
-    height: 3rem;
-    width: 3rem;
-    background-color: white;
-    border-radius: 50%;
-}
 
 .name h1 {
     margin: 0;
 }
 
-.name h2 {
-    padding-top: 1.6rem;
-    writing-mode: vertical-rl;
-    white-space: nowrap;
-}
+
 
 .content {
     height: 100%;
@@ -118,16 +174,9 @@ p{
 
 .containerp1 {
     display: flex;
+
 }
 
-.rightdec {
-    margin-left: 1rem;
-    display: flex;
-    height: inherit;
-    width: 100%;
-    justify-content: left;
-    align-items: flex-end;
-}
 
 .aboutpage {
     display: flex;
@@ -135,9 +184,10 @@ p{
     min-height: 20rem;
     justify-content: center;
     position: relative;
-  
-    
+
+
 }
+
 
 .aboutpage::before {
     position: absolute;
@@ -183,18 +233,18 @@ h1 {
     margin: 5rem -13vw;
     padding: 3rem 0;
     background-color: white;
-    color:rgb(33,33,33);
-    
+    color: rgb(33, 33, 33);
+
 }
 
-.skillcontainer{
+.skillcontainer {
     padding: 3rem 13vw 0 13vw;
     display: flex;
     flex-direction: column;
 }
 
 .skills::after {
-    
+
     position: absolute;
     left: 0;
     bottom: 0;
@@ -222,9 +272,9 @@ h1 {
 
 }
 
-.trail.black{
+.trail.black {
     background-color: rgb(33, 33, 33);
-    
+
 }
 
 .skilldescription {
@@ -249,7 +299,7 @@ h1 {
     padding: 0.5rem;
     align-items: center;
     justify-content: center;
-    
+
 
     box-shadow: 0 0 5px rgb(33, 33, 33);
     z-index: 99;
@@ -266,7 +316,7 @@ h1 {
     padding: 0.5rem
 }
 
-.misc{
+.misc {
     width: 100%;
     height: fit-content;
     text-align: center;
@@ -283,7 +333,7 @@ h1 {
 
 }
 
-.languages::before{
+.languages::before {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -296,7 +346,7 @@ h1 {
     content: "";
 }
 
-.languages::after{
+.languages::after {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -309,14 +359,14 @@ h1 {
     content: "";
 }
 
-.heading{
+.heading {
     display: flex;
     align-items: center;
 }
 
-.heading .trail{
-    width:100%;
-    z-index:99;
+.heading .trail {
+    width: 100%;
+    z-index: 99;
 }
 
 .projectcontainer {
@@ -368,7 +418,7 @@ h1 {
     flex-wrap: wrap-reverse;
     height: 19rem;
     z-index: 8;
-    
+
 
 }
 
@@ -440,13 +490,13 @@ h1 {
 
 }
 
-.contact{
+.contact {
     position: relative;
     min-height: 40rem;
     margin: 5rem -13vw;
     padding: 3rem 0;
     color: rgb(33, 33, 33);
-    background-color: white; 
+    background-color: white;
 }
 
 .contact::before {
@@ -464,11 +514,11 @@ h1 {
 }
 
 .contact::after {
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:100%;
-    height:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(/misc/thanks.png);
     background-position: left top;
     background-repeat: no-repeat;
@@ -476,33 +526,39 @@ h1 {
     content: "";
 }
 
-.contact h1{
-    color: rgb(33,33,33);
+.contact h1 {
+    color: rgb(33, 33, 33);
 }
 
-.contact .skillcontainer{
+.contact .skillcontainer {
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.contact .skilldisplay{
-    width:7rem;
-    height:7rem;
+.contact .skilldisplay {
+    width: 7rem;
+    height: 7rem;
     margin: 0 1rem;
 }
 
-.contactcontainer{
+.contactcontainer {
     display: flex;
     flex-direction: column;
 }
 
-.contacttext{
+.contacttext {
+
     flex-direction: column;
     align-self: center;
     display: flex;
     max-width: 40rem;
+    padding: inherit;
 }
 
-.footer{
+
+
+.footer {
 
     display: flex;
     justify-content: center;
@@ -515,12 +571,12 @@ h1 {
 
 
 
-.outercontainer{
+.outercontainer {
     margin: 5rem -13vw;
- 
+
 }
 
-.innercontainer{
+.innercontainer {
     padding: 3rem 13vw 3rem 13vw;
 
 }
@@ -534,6 +590,54 @@ h1 {
 }
 
 
+@media only screen and (max-width:675px) {
+
+ 
+
+    .contacttext {
+        width: 100%;
+    }
+
+    
+    .contact .skilldisplay {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin: 0 1rem;
+    }
+
+
+    .landingpage h1 {
+        line-height: 4.5rem;
+        font-size: 5rem;
+    }
+
+    .landingpage p {
+        font-size: 0.8rem;
+    }
+
+    .landingpage h2 {
+        font-size: 0.9rem;
+    }
+
+    .toptext::before {
+        left: 0;
+        top: -2.2rem;
+        font-size: 1rem;
+    }
+
+    .landingpage svg {
+        height: 2rem;
+    }
+
+
+    .textbox {
+        width: 17rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+}
 
 @media only screen and (max-width:1225px) {
     .projectdisplay {
@@ -562,5 +666,15 @@ h1 {
     .projectdisplay .projecttext .smallimage img:hover {
         -webkit-filter: brightness(90%);
 
+    }
+
+    .contacttext p {
+        padding: inherit;
+    }
+}
+
+@media only screen and (min-width:873px) {
+    .landingpage::after {
+        background-size: auto 90%;
     }
 }
