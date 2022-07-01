@@ -236,7 +236,7 @@ p {
     position: absolute;
     right: 0;
     top: 0;
-    background-image: url("/misc/welcomebackground.png");
+    background-image: url("../misc/welcomebackground.png");
     background-size: 100% auto;
     background-position: center;
     width: 100%;
@@ -299,7 +299,7 @@ p {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/misc/aboutbackground.png");
+    background-image: url("../misc/aboutbackground.png");
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 80% auto;
@@ -359,7 +359,7 @@ h1 {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/misc/skillsbackground.png");
+    background-image: url("../misc/skillsbackground.png");
     background-position: right top;
     background-repeat: no-repeat;
     background-size: 50% auto;
@@ -373,7 +373,7 @@ h1 {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/misc/contactbackground.png");
+    background-image: url("../misc/contactbackground.png");
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 30% auto;
@@ -448,7 +448,7 @@ h1 {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/misc/projectbackground2.png");
+    background-image: url("../misc/projectbackground2.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 80% auto;
@@ -461,7 +461,7 @@ h1 {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/misc/languages.png");
+    background-image: url("../misc/languages.png");
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: auto 60%;
@@ -495,7 +495,7 @@ h1 {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/misc/projectbackground2.png");
+    background-image: url("../misc/projectbackground2.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 80% auto;
@@ -510,7 +510,7 @@ h1 {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/misc/projectbackground.png");
+    background-image: url("../misc/projectbackground.png");
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 60% auto;
@@ -626,7 +626,7 @@ h1 {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/misc/finalbackground.png");
+    background-image: url("../misc/finalbackground.png");
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 40% auto;
@@ -640,7 +640,7 @@ h1 {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/misc/thanks.png");
+    background-image: url("../misc/thanks.png");
     background-position: left top;
     background-repeat: no-repeat;
     background-size: auto 80%;
