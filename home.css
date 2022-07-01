@@ -84,6 +84,16 @@ p {
   
 }
 
+#progressbar{
+    content: "";
+    background-image: linear-gradient(to left, var(--var5), var(--var3));
+    width: 100%;
+    position:absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+}
+
 #hamburger{
     position:fixed;
     right: 0.2rem;
@@ -137,7 +147,7 @@ p {
     background-color: white;
     display: flex;
     align-items: center;
-
+    overflow: hidden;
     width: inherit;
     height: 98vh;
     margin: 0 -13vw;
@@ -301,7 +311,7 @@ p {
 
 .trail {
     width: 0%;
-    height: 4px;
+    height: 3px;
     background-color: white;
     margin: 0 2rem;
     transition: width 2s;
@@ -536,10 +546,19 @@ h1 {
     display: flex;
 }
 
-.projectdisplay .actions {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
+.projectdisplay .actions{
+    position: absolute;
+    bottom: 1rem;
+    
+}
+
+.projectdisplay .actions img{
+    transition:transform 500ms;
+}
+
+.projectdisplay .actions img:hover{
+    cursor: pointer;
+    transform: translateY(0.2rem);
 }
 
 .projectdisplay .projecttext .smallimage img {
@@ -562,7 +581,7 @@ h1 {
 }
 
 .projectdisplay .projectimage img {
-    height: calc(19rem + 2px);
+    height: calc(19rem + 5px);
     margin: 0;
     -webkit-filter: brightness(70%);
     -webkit-transition: all 1s ease;
@@ -585,12 +604,11 @@ h1 {
 }
 
 .textbox {
-    border: 1px solid white;
+    border: 2.5px solid white;
     width: 20rem;
     font-weight: 100;
     padding: 0.5rem 1rem;
     height: 18rem;
-    background-color: rgb(33, 33, 33);
 }
 
 .contact {
@@ -643,6 +661,12 @@ h1 {
     width: 7rem;
     height: 7rem;
     margin: 0 1rem;
+    transition: transform 400ms;
+}
+
+.contact .skilldisplay:hover{
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 .contactcontainer {
@@ -701,6 +725,8 @@ h1 {
 }
 
 @media only screen and (max-width:675px) {
+ 
+ 
 
     .landingpage::after {
         background-size: auto 50%;
@@ -714,6 +740,7 @@ h1 {
     }
     #hamburger{
         display:block;
+        cursor: pointer;
     }
 
     .navbar a{
@@ -803,6 +830,11 @@ h1 {
         overflow: hidden;
 
 
+    }
+
+    .projectdisplay .actions{
+        position: relative;
+        bottom:0;
     }
 
     .projectdisplay .projecttext .smallimage img:hover {
