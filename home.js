@@ -1,6 +1,4 @@
-const toTop = () => { window.scrollTo(0, 0) };
 
-const toAbout = () => { document.getElementById("about").scrollIntoView() };
 const aboutSection = document.getElementById("abouttrail");
 const skillsSection = document.getElementById("skillstrail");
 const projectsSection = document.getElementById("projectstrail");
@@ -8,6 +6,10 @@ const contactSection = document.getElementById("contacttrail");
 const mobileMenu = document.getElementById("actions");
 const menuIcon = document.getElementById("hamburger");
 const loadingBar = document.getElementById("progressbar");
+
+
+const toTop = () => { window.scrollTo(0, 0) };
+const toAbout = () => { document.getElementById("about").scrollIntoView() };
 
 const getScrollPercentage = () => {
     return window.scrollY / (document.body.offsetHeight - window.innerHeight);   
