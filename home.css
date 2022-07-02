@@ -149,7 +149,7 @@ p {
     align-items: center;
     overflow: hidden;
     width: inherit;
-    height: 98vh;
+    min-height: 98vh;
     margin: 0 -13vw;
     position: relative;
 }
