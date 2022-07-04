@@ -808,7 +808,7 @@ h1 {
     }
 }
 
-@media only screen and (max-width:1225px) {
+@media only screen and (max-width:1145px) {
     .projectdisplay {
         height: auto;
     }
