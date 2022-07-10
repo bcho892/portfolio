@@ -592,7 +592,7 @@ h1 {
 }
 
 .projectdisplay .projectimage.right img {
-    height: calc(19rem + 2px);
+    
     margin: 0;
     -webkit-filter: brightness(70%);
     margin-left: 2rem;
