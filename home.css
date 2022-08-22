@@ -1,5 +1,5 @@
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -166,7 +166,15 @@ p {
     user-select: none;
 }
 
+.welcometext{
+    transform: translate(-4rem, -1rem);
+    font-size: 2rem;
+    font-weight: 300;
+    color:var(--var4)
+}
+
 .toptext {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     position: relative;
     z-index: 99;
@@ -174,7 +182,7 @@ p {
 
 .toptext::before {
     content: "I am";
-    font-weight: 900;
+    font-weight: 200;
     position: absolute;
     font-size: 1.5rem;
     left: -4rem;
@@ -209,6 +217,7 @@ p {
 }
 
 .bottomtext * {
+    font-weight:200;
     background-color: rgb(33, 33, 33);
     margin: 0.3rem 0;
     padding: 0.5rem 1rem;
