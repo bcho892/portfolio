@@ -174,7 +174,6 @@ p {
 }
 
 .toptext {
-    font-family: 'Roboto', sans-serif;
     display: flex;
     position: relative;
     z-index: 99;
@@ -736,6 +735,11 @@ h1 {
 @media only screen and (max-width:675px) {
  
  
+    .welcometext{
+        transform: translateY(-3rem);
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
 
     .landingpage::after {
         background-size: auto 50%;
