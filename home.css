@@ -177,6 +177,7 @@ p {
     display: flex;
     position: relative;
     z-index: 99;
+    font-weight: 900;
 }
 
 .toptext::before {
