@@ -432,9 +432,7 @@ h1 {
     padding: 0.5rem;
     align-items: center;
     justify-content: center;
-
-
-    box-shadow: 0 0 5px rgb(33, 33, 33);
+    box-shadow: 4px 4px rgb(33,33,33);
     z-index: 99;
 }
 
@@ -682,6 +680,7 @@ h1 {
 }
 
 .contact .skilldisplay {
+
     width: 7rem;
     height: 7rem;
     margin: 0 1rem;
