@@ -81,23 +81,23 @@ p {
     display: flex;
     justify-content: right;
     align-items: center;
-  
+
 }
 
-#progressbar{
+#progressbar {
     content: "";
     background-image: linear-gradient(to left, var(--var5), var(--var3));
     width: 100%;
-    position:absolute;
+    position: absolute;
     bottom: -2px;
     left: 0;
     height: 2px;
 }
 
-#hamburger{
-    position:fixed;
+#hamburger {
+    position: fixed;
     right: 0.2rem;
-    top:0.2rem;
+    top: 0.2rem;
     z-index: 1000;
     display: none;
     fill: white;
@@ -166,11 +166,11 @@ p {
     user-select: none;
 }
 
-.welcometext{
+.welcometext {
     transform: translate(-4rem, -1rem);
     font-size: 2rem;
     font-weight: 300;
-    color:var(--var4)
+    color: var(--var4)
 }
 
 .toptext {
@@ -197,14 +197,14 @@ p {
     height: 5rem;
     width: auto;
     margin-top: 5rem;
-    animation-name:bob;
+    animation-name: bob;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
-.landingpage svg:hover{
+.landingpage svg:hover {
     animation-play-state: paused;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 
@@ -217,7 +217,7 @@ p {
 }
 
 .bottomtext * {
-    font-weight:200;
+    font-weight: 200;
     background-color: rgb(33, 33, 33);
     margin: 0.3rem 0;
     padding: 0.5rem 1rem;
@@ -225,11 +225,9 @@ p {
     transition: transform 200ms;
 }
 
-.bottomtext *:hover{
+.bottomtext *:hover {
     transform: translateX(0.5rem);
 }
-
-
 
 
 .bottomtext :last-child,
@@ -238,25 +236,6 @@ p {
     width: fit-content;
 }
 
-
-
-
-.landingpage::after {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-image: url(/portfolio/misc/welcomebackground.png);
-    background-size: 100% auto;
-    background-position: center;
-    width: 100%;
-    opacity: 50%;
-    height: 100%;
-    content: "";
-    background-repeat: no-repeat;
-    animation: rotate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-}
 
 .main {
     width: 100%;
@@ -272,6 +251,7 @@ p {
     color: white;
     flex-direction: column;
     z-index: 2;
+    position: relative;
 }
 
 
@@ -279,6 +259,42 @@ p {
     margin: 0;
 }
 
+.bgwrapper {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.namebackground {
+    height: 100%;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.namebackground .bracket{
+    animation:bob 6s;
+    animation-iteration-count: infinite;
+}
+
+.namebackground .bracket img {
+    height: 56rem;
+
+}
+
+.namebackground .bracket.left{
+    animation-delay:0.9s;
+}
+
+.namebackground .bracket.left img {
+    transform: translate(0, -5rem);
+
+}
+
+.namebackground .bracket.right img {
+    transform: scale(-1, -1) rotate(-15deg);
+}
 
 
 .content {
@@ -287,7 +303,7 @@ p {
 
 .containerp1 {
     display: flex;
-
+    position: relative;
 }
 
 
@@ -326,8 +342,8 @@ p {
     transition: width 2s;
 }
 
-.trail.inview{
-    width:100%;
+.trail.inview {
+    width: 100%;
 }
 
 .aboutdescription {
@@ -483,7 +499,7 @@ h1 {
 }
 
 .heading .trail {
-   
+
     z-index: 99;
 }
 
@@ -555,17 +571,17 @@ h1 {
     display: flex;
 }
 
-.projectdisplay .actions{
+.projectdisplay .actions {
     position: absolute;
     bottom: 1rem;
-    
+
 }
 
-.projectdisplay .actions img{
-    transition:transform 500ms;
+.projectdisplay .actions img {
+    transition: transform 500ms;
 }
 
-.projectdisplay .actions img:hover{
+.projectdisplay .actions img:hover {
     cursor: pointer;
     transform: translateY(0.2rem);
 }
@@ -601,7 +617,7 @@ h1 {
 }
 
 .projectdisplay .projectimage.right img {
-    
+
     margin: 0;
     -webkit-filter: brightness(70%);
     margin-left: 2rem;
@@ -673,7 +689,7 @@ h1 {
     transition: transform 400ms;
 }
 
-.contact .skilldisplay:hover{
+.contact .skilldisplay:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
@@ -724,44 +740,43 @@ h1 {
 .left {
     border-right: none;
 }
-.navbar ul.menuopen{
+
+.navbar ul.menuopen {
     visibility: visible;
     opacity: 1;
 }
 
-#hamburger.menuopen{
+#hamburger.menuopen {
     fill: var(--var4);
 }
 
 @media only screen and (max-width:675px) {
- 
- 
-    .welcometext{
+
+
+    .welcometext {
         transform: translateY(-3rem);
         font-size: 1.4rem;
         font-weight: 700;
     }
 
-    .landingpage::after {
-        background-size: auto 50%;
-    }
-
     .contacttext {
         width: 100%;
     }
-    .navbar{
+
+    .navbar {
         justify-content: center;
     }
-    #hamburger{
-        display:block;
+
+    #hamburger {
+        display: block;
         cursor: pointer;
     }
 
-    .navbar a{
-        padding:0.7rem 0;
+    .navbar a {
+        padding: 0.7rem 0;
     }
 
-    .navbar ul{
+    .navbar ul {
         align-items: center;
         background-color: var(--var4);
         width: 100vw;
@@ -774,24 +789,28 @@ h1 {
         flex-direction: column;
     }
 
-    .navbar li{
+    .navbar li {
         margin: 0.7rem 0;
     }
 
-    .navbar a:hover{
+    .navbar a:hover {
         color: rgb(33, 33, 33);
     }
+
     .contact .skilldisplay {
         width: 4.5rem;
         height: 4.5rem;
         margin: 0 1rem;
     }
 
+    .namebackground .bracket img {
+        height: 30rem;
+    }
 
     .landingpage h1 {
         line-height: 4.5rem;
         font-size: 5rem;
-        
+
     }
 
     .landingpage p {
@@ -822,6 +841,7 @@ h1 {
     }
 }
 
+
 @media only screen and (max-width:1190px) {
     .projectdisplay {
         height: auto;
@@ -846,9 +866,9 @@ h1 {
 
     }
 
-    .projectdisplay .actions{
+    .projectdisplay .actions {
         position: relative;
-        bottom:0;
+        bottom: 0;
     }
 
     .projectdisplay .projecttext .smallimage img:hover {
@@ -861,8 +881,3 @@ h1 {
     }
 }
 
-@media only screen and (min-width:873px) {
-    .landingpage::after {
-        background-size: auto 90%;
-    }
-}
