@@ -296,7 +296,6 @@ p {
     transform: scale(-1, -1) rotate(-15deg);
 }
 
-
 .content {
     height: 100%;
 }
@@ -881,3 +880,8 @@ h1 {
     }
 }
 
+@media only screen and (min-width:2100px){
+    .namebackground .bracket img {
+        height:80rem;
+    }
+}
